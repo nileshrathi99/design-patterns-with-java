@@ -1,30 +1,28 @@
-package com.designPatterns.observer.weathermonitoringstation.observers;
+package com.designPatterns.observer.weathermonitoringstation.subscribers;
 
+import com.designPatterns.observer.weathermonitoringstation.Subscriber;
 import com.designPatterns.observer.weathermonitoringstation.Subject;
-import com.designPatterns.observer.weathermonitoringstation.WeatherData;
 
-public class ForecastDisplay implements Observer, DisplayElement{
+public class CurrentConditionsDisplay implements Subscriber, DisplayElement{
 
     private float temperature;
     private float humidity;
-    private float pressure;
     private Subject weatherData;
 
-    public ForecastDisplay(Subject weatherData){
+    public CurrentConditionsDisplay(Subject weatherData){
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
     @Override
     public void display() {
-        System.out.println("Watch out: " + temperature + "F degrees, " + humidity + "% humidity and " + pressure +" pressure");
+        System.out.println("Current Conditions: " + temperature + "F degrees and " + humidity + "% humidity");
     }
 
     @Override
     public void update(float temperature, float humidity, float pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
-        this.pressure = pressure;
         display();
     }
 }

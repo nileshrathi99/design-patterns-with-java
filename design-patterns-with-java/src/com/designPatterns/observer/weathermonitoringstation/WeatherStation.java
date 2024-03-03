@@ -1,8 +1,9 @@
 package com.designPatterns.observer.weathermonitoringstation;
 
-import com.designPatterns.observer.weathermonitoringstation.observers.CurrentConditionsDisplay;
-import com.designPatterns.observer.weathermonitoringstation.observers.ForecastDisplay;
-import com.designPatterns.observer.weathermonitoringstation.observers.StatisticsDisplay;
+import com.designPatterns.observer.weathermonitoringstation.subscribers.CurrentConditionsDisplay;
+import com.designPatterns.observer.weathermonitoringstation.subscribers.ForecastDisplay;
+import com.designPatterns.observer.weathermonitoringstation.subscribers.StatisticsDisplay;
+import com.designPatterns.observer.weathermonitoringstation.publishers.WeatherData;
 
 public class WeatherStation {
 
@@ -19,6 +20,6 @@ public class WeatherStation {
 
         weatherData.removeObserver(forecastDisplay);
         weatherData.setMeasurements(60, 45, 40);
-
+        forecastDisplay.display();
     }
 }

@@ -1,11 +1,9 @@
 package com.designPatterns.observer.weathermonitoringstation;
 
-import com.designPatterns.observer.weathermonitoringstation.observers.Observer;
-
 public interface Subject {
 
-    public void registerObserver(Observer o);
-    public void removeObserver(Observer o);
+    public void registerObserver(Subscriber o);
+    public void removeObserver(Subscriber o);
     public void notifyObservers();
 
 }
