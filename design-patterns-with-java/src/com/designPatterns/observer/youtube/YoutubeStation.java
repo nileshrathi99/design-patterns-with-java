@@ -18,15 +18,19 @@ public class YoutubeStation {
         neetcode.addSubscriber(ram);
         neetcode.upload(2);
         System.out.println();
+
         cokestudio.addSubscriber(baburao);
         cokestudio.upload(1);
         System.out.println();
+
         neetcode.addSubscriber(shyam);
         neetcode.upload(3);
         System.out.println();
+
         neetcode.removeSubscriber(ram);
         neetcode.addSubscriber(baburao);
         neetcode.upload(2);
+
         System.out.println();
         cokestudio.upload(1);
 

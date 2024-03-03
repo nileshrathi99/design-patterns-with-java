@@ -1,6 +1,6 @@
-package com.designPatterns.decorator.starbuzz;
+package com.designPatterns.decorator.chipotlay;
 
-public abstract class Beverage {
+public abstract class Base {
 
     protected String description;
 
