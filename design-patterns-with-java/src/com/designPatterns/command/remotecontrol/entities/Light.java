@@ -12,11 +12,14 @@ public class Light {
 
     public void on(){
         this.lightsOn = true;
+        System.out.println("Light is on");
         // code to turn light one
     }
 
     public void off(){
         this.lightsOn = false;
+        System.out.println("Light is off");
+
     }
 
 }
